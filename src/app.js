@@ -50,16 +50,20 @@ app.get('/weather',(req,res) =>{
         if(error){
             return res.send({ error })
         }
-        forcast(latitude, longitude, (error,forcastData)=>{
-            if(error){
-               return res.send({ error })
-            }
-            res.send({
-                forcast: forcastData,
-                location,
-                address: req.query.address
-            })
-        }) 
+        else{
+            forcast(latitude, longitude, (error,forcastData)=>{
+                if(error){
+                   return res.send({ error })
+                }
+                else{
+                    res.send({
+                        forcast: forcastData,
+                        location,
+                        address: req.query.address
+                    })
+                }
+            }) 
+        }
     }) 
 })
 

@@ -26,7 +26,10 @@ weatherFrom.addEventListener('submit', (event)=>{
     fetch('/weather?address='+location).then((response)=>{
     response.json().then((data)=>{
         if(data.error)
+        {
             messageOne.textContent = data.error
+            messageTwo.textContent = ''
+        }
         else{
             messageOne.textContent = 'Location: ' + data.location 
             messageTwo.textContent = 'Forcast: ' + data.forcast
