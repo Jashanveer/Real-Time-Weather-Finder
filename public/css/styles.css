@@ -17,7 +17,7 @@ body {
     text-align: center;
     height: 500px;
     margin-top: 50px;
-    border-radius: 0.7em;
+    border-radius: 1em;
 }
 
 
@@ -48,13 +48,17 @@ header a {
 .portrait {
     width: 180px ;
     height: 220px;
-    border-radius: 0.5em;
+    border-radius: 1em;
 }
 
 input {
     border: 1px solid #cccccc;
     padding: 8px;
-    border-radius: 0.5em;
+    border-radius: 1em;
+}
+
+input:focus{
+    outline: none;
 }
 
 #button {
@@ -63,7 +67,10 @@ input {
     background: #b3a288;
     color: white;
     padding: 8px;
-    border-radius: 0.5em;
+    border-radius: 1em;
+}
+#button:focus{
+    outline: none;
 }
 
 #message-2{

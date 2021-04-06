@@ -76,10 +76,9 @@ app.get('*', (req,res)=>{
         title: '404',
         name: 'Jashanveer',
         errorMessage: 'page not found'
-    }) // it needs to be kept at the end after all routes
+    }) 
 })
 
 app.listen(port, ()=>{
     console.log('Server is up on port '+ port)
 })
-
